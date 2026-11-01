@@ -9,7 +9,7 @@ on:
 
   workflow_dispatch:
 
-jobs:git add .
+jobs:
   test:
     runs-on: ubuntu-latest
 
@@ -22,5 +22,5 @@ jobs:git add .
         with:
           python-version: "3.12"
 
-      - name: Run unit testsلهف
+      - name: Run unit tests
         run: python -m unittest discover -s tests -p "test_add.py"
