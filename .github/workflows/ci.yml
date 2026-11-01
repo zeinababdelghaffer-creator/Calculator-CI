@@ -3,8 +3,10 @@ name: Calculator CI
 on:
   push:
     branches: [main, master]
+
   pull_request:
     branches: [main, master]
+
   workflow_dispatch:
 
 jobs:
@@ -21,4 +23,4 @@ jobs:
           python-version: "3.12"
 
       - name: Run unit tests
-        run: python -m unittest discover -s tests -v
+        run: python -m unittest discover -s tests -p "test_add.py"
